@@ -1,0 +1,12 @@
+*
+!*/
+!*.ly
+!*.pdf
+!*.midi
+!*.ps
+!.gitignore
+!index.html
+!generate.py
+!update*.sh
+!*.png
+!feed.rss
