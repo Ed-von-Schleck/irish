@@ -20,11 +20,15 @@ chordNames = \chordmode {
   d1 g2 d
   a1 d4 a d2
 
-  %% Refrain %%
   d2 fis:m b:m a
   fis:m b:m g a
   d d:7/fis g2 d
   a fis:m b4:m a
+
+  d1 a d g2 a2
+  d1 g2 d
+  a1 d4 a d2
+  s1*4 a1
 }
 
 lead = \relative c' {
@@ -39,6 +43,7 @@ lead = \relative c' {
   d'4 d8 d d4 a8 a
   b g d' b a4 r8 a
   a a \tuplet 3/2 4 { a a a  a a a  a a g }
+  \break
   fis8 d e cis d4 r8 d
 
   \repeat volta 2 {
@@ -57,6 +62,7 @@ lead = \relative c' {
 
   d4^\markup{ \italic Fine } cis b \tuplet 3/2 { a8 b cis }
   d4 cis b r8 a
+  \break
 
   d8 d d d d d d d
   \tuplet 3/2 { e e d } cis b a4 r8 d
@@ -92,7 +98,7 @@ backingOne = \relative c' {
   e4 cis cis8 cis cis cis
   \tuplet 3/2 { d d d } cis8 cis
   d4 cis b \tuplet 3/2 { a8 b cis }
-  d4 cis b r4
+  d4 cis b s4
  
 }
 
@@ -207,8 +213,10 @@ choirPart = \new ChoirStaff <<
   }
 }
 
-#(set-global-staff-size 16)
+#(set-global-staff-size 17)
 
 \paper {
-  %page-count = #1
+  page-count = #1
+  ragged-last-bottom = ##f
+  ragged-bottom = ##f
 }
