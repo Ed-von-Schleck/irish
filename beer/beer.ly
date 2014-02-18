@@ -25,9 +25,9 @@ chordNames = \chordmode {
   d d:7/fis g2 d
   a fis:m b4:m a
 
+  d1*2
   d1 a d g2 a2
   d1 g2 d
-  a1 d4 a d2
   s1*4 a1
 }
 
