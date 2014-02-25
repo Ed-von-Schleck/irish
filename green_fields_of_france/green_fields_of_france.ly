@@ -1,0 +1,282 @@
+\version "2.16.1"
+
+#(set-global-staff-size 19)
+
+\header {
+  title = "The Green Fields of France"
+  composer = "Eric Bogle"
+  arranger = "Ed von Schleck"
+}
+
+global = {
+  \key g \major
+  \time 3/4
+  \partial 4
+  \tempo 4=135
+}
+
+chordNames = \chordmode {
+  \global
+  \germanChords
+  s4
+
+  g2. e:m c d
+  d2.*2 c2. g2.
+  g2. e:m c d
+  d2.*2 c2. g2.
+
+  g2. e:m a:m c
+  d2.*2 c2. d2.
+  g2. e:m a:m c
+  d2.*2 c2. g2.
+
+  d2.*2 c2. g
+  d2.*2 c2. d
+  c2.*2 g2. e:m
+  g e:m d g
+
+}
+
+lead = \relative c' {
+  \global 
+  d4
+
+  d2 d8 g
+  g2 g4
+  e8 e4. c4
+  a4 r4 fis'8 fis
+
+  fis4. fis8 g4
+  a8 a4. g4
+  g4. c,8 e4
+  d4 r d
+
+  d2 d8 g
+  g2 g8 g
+  e4 e8 c4.
+  a4 r fis'8 fis
+
+  fis4 fis8 g4.
+  a2 g4
+  g g a
+  g4 r d'
+
+
+  d4 d d8 d~
+  d4 c c8 b
+  a4 a8 b4.
+  c4 r c8 b
+
+  a4. a8 b4
+  c4 b a
+  g a b8 a~
+  a4 r d8 d
+
+  d4 d8 d4.
+  d4 c b
+  a a8 g4.
+  e4 r a8 a
+
+  a a4. b4
+  c4 r b8 a
+  g4 g8 g4.
+  g4 r g8 a
+
+
+  a4. a8 a4
+  a b b8 c
+  c4. d8 c4
+  b16( a) g4 r8 g a
+
+  a4. a8 a4
+  a b c
+  c8 d4. c4
+  a4 r c8 c
+
+  c4 c4. c8
+  c4 d4. c8
+  b b~ b2
+  r2 g8 g
+
+  g4 a b8 b~
+  b4 c b8 a~(
+  a4. g8 fis4)
+  g4 r2
+  \bar "|."
+  
+}
+
+backingOne = \relative c'' {
+  \global
+  r4
+
+  R2.*31
+  r2 g8 e
+
+  fis4. fis8 fis4
+  fis4 fis fis8 fis
+  g4. g8 g4
+  g8 g4 r8 g e
+
+  fis4. fis8 fis4
+  fis4 fis fis
+  g8 g4. g4
+  fis4 r fis8 fis
+
+  g4 g4. g8
+  g4 g4. g8
+  g g~ g2
+  r2 g8 g
+
+  g4 fis g8 g~
+  g4 g g8 fis~(
+  fis4. e8 fis4)
+  g4 r2
+
+
+}
+
+backingTwo = \relative c'' {
+  \global
+  r4
+
+  R2.*31
+  r2 g8 e
+
+  d4. d8 d4
+  d4 d d8 d
+  e4. e8 e4
+  d8 d4 r8 d8 e
+
+  d4. d8 d4
+  d d d
+  e8 e4. e4
+  d4 r d8 d
+
+  e4 e4. e8
+  e4 e4. c8
+  d8 d~ d2
+  r2 e8 e
+
+  d4 d d8 e~
+  e4 e e8 d~(
+  d2 c4)
+  b4 r2
+}
+
+violin = \relative c' {
+  \global
+  r4
+  R2.*31
+  g8 a b c d e
+
+  fis2 fis8 g
+  a4. g8 fis4
+  e8 fis g a c d
+  b4 b,8 c d e
+
+  fis2 fis8 g
+  a4. g8 fis4
+  e8 fis g a c d
+  d4 r c8 d
+
+  e4 e4. fis8
+  g4 fis4. e8
+  d8 d4 c8 b a
+  g fis e r b' b
+
+  b4 c d8 e~
+  e4 e d8 e
+  a,8 b c b a b
+  g4 
+}
+
+verseOne = \lyricmode {
+  \set stanza = "1."
+  Well how do you do young Wil -- ly Mc -- Bride
+  do you mind if I sit here down by your grave -- side
+  and rest for a while in the warm sum -- mer sun
+  I've been wal -- king all day and I'm near -- ly done
+
+  I see by your grave -- stone your were on -- ly nine -- teen
+  when you joined the great fal -- ling in nine -- teen six -- teen
+  well I hope you died well and I hope you died clean
+  or young Wil -- ly Mc -- Bride was it slow and ob -- scene
+
+  \set stanza = "Ref."
+  Did they beat the drum slow -- ly
+  did they play the fifes low -- ly
+  did they sound the death march as they lo -- wered you down
+  did the band play the last post and cho -- rus
+  did the pipes play the flowers of the fo -- rest
+}
+
+verseTwo = \lyricmode {
+  \set stanza = "2."
+}
+
+verseThree = \lyricmode {
+  \set stanza = "3."
+  
+}
+
+verseFour = \lyricmode {
+  \set stanza = "4."
+}
+
+verseFive = \lyricmode {
+  \set stanza = "5."
+}
+
+chordsPart = \new ChordNames \chordNames
+
+violinPart = \new Staff \violin
+
+choirPart = \new ChoirStaff <<
+  \new Staff \with {
+    instrumentName = \markup \center-column { "Lead" }
+  } <<
+    \new Voice = "lead" { \lead }
+  >>
+  \new Lyrics \with {
+    \override VerticalAxisGroup #'staff-affinity = #CENTER
+  } \lyricsto "lead" \verseOne
+  \new Lyrics \with {
+    \override VerticalAxisGroup #'staff-affinity = #CENTER
+  } \lyricsto "lead" \verseTwo
+  \new Lyrics \with {
+    \override VerticalAxisGroup #'staff-affinity = #CENTER
+  } \lyricsto "lead" \verseThree
+  \new Lyrics \with {
+    \override VerticalAxisGroup #'staff-affinity = #CENTER
+  } \lyricsto "lead" \verseFour
+  \new Lyrics \with {
+    \override VerticalAxisGroup #'staff-affinity = #CENTER
+  } \lyricsto "lead" \verseFive
+  \new Staff \with {
+    instrumentName = \markup \center-column { "Backing 1" "Backing 2" }
+  } <<
+    \new Voice = "backingOne" { \voiceOne \backingOne }
+    \new Voice = "backingTwo" { \voiceTwo \backingTwo }
+  >>
+>>
+
+\score {
+  <<
+    \chordsPart
+    \violinPart
+    \choirPart
+  >>
+  \layout {
+    \context {
+      \RemoveEmptyStaffContext
+      \override VerticalAxisGroup #'remove-first = ##t
+    }
+  }
+  \midi {
+    \context {
+      \Score
+      tempoWholesPerMinute = #(ly:make-moment 100 4)
+    }
+  }
+}
