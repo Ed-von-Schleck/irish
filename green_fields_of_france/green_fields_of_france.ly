@@ -1,6 +1,6 @@
-\version "2.16.1"
+\version "2.18.0"
 
-#(set-global-staff-size 19)
+#(set-global-staff-size 20)
 
 \header {
   title = "The Green Fields of France"
@@ -33,7 +33,7 @@ chordNames = \chordmode {
   d2.*2 c2. g
   d2.*2 c2. d
   c2.*2 g2. e:m
-  g e:m d g
+  g e:m d g2
 
 }
 
@@ -95,13 +95,13 @@ lead = \relative c' {
 
   c4 c4. c8
   c4 d4. c8
-  b b~ b2
+  b b r2
   r2 g8 g
 
   g4 a b8 b~
   b4 c b8 a~(
   a4. g8 fis4)
-  g4 r2
+  g4 r4
   \bar "|."
   
 }
@@ -125,13 +125,13 @@ backingOne = \relative c'' {
 
   g4 g4. g8
   g4 g4. g8
-  g g~ g2
+  g g r2
   r2 g8 g
 
   g4 fis g8 g~
   g4 g g8 fis~(
   fis4. e8 fis4)
-  g4 r2
+  g4 r4
 
 
 }
@@ -155,13 +155,13 @@ backingTwo = \relative c'' {
 
   e4 e4. e8
   e4 e4. c8
-  d8 d~ d2
+  d8 d r2
   r2 e8 e
 
   d4 d d8 e~
   e4 e e8 d~(
   d2 c4)
-  b4 r2
+  b4 r4
 }
 
 violin = \relative c' {
@@ -188,7 +188,7 @@ violin = \relative c' {
   b4 c d8 e~
   e4 e d8 e
   a,8 b c b a b
-  g4 
+  g4 r4
 }
 
 verseOne = \lyricmode {
@@ -199,7 +199,7 @@ verseOne = \lyricmode {
   I've been wal -- king all day and I'm near -- ly done
 
   I see by your grave -- stone your were on -- ly nine -- teen
-  when you joined the great fal -- ling in nine -- teen six -- teen
+  when you joined the great fal -- ling in nine -- teen -- six -- teen
   well I hope you died well and I hope you died clean
   or young Wil -- ly Mc -- Bride was it slow and ob -- scene
 
@@ -213,15 +213,43 @@ verseOne = \lyricmode {
 
 verseTwo = \lyricmode {
   \set stanza = "2."
+  Did~you leave _ a wife or~a sweet -- heart be -- hind
+  in _ some faith -- ful heart is your memo -- ry en -- shrined
+  and though you died back _ in nine -- teen -- six -- teen
+  in _ some faith -- ful heart you're~for -- e -- ver nine -- teen
+   
+  or are you a stran -- ger with -- out e -- ven a name
+  en --  _ shrined _ for -- e -- ver be -- hind a glass frame
+  in an old pho -- to -- graph torn, _ bat -- tered and stained
+  and _ fa -- ding to yellow in a brown lea -- ther frame
+
 }
 
 verseThree = \lyricmode {
   \set stanza = "3."
+  Well~the sun now it shines on~the green fields of France
+  there's a warm sum -- mer breeze it~makes the red pop -- pies dance
+  and look how the sun shines from un -- der the clouds
+  there's no gas, no barbed wire, there's~no gun fi -- ring now.
+   
+  but here in this grave -- yard it is still no man's land
+  the _ count -- less white cros -- ses stand mute in the sand
+  to _ man's blind in -- dif -- ference to his fel -- low man
+  to a whole ge -- ne -- ration that were but -- chered and dammed
   
 }
 
 verseFour = \lyricmode {
   \set stanza = "4."
+  Well Will Mc -- _ Bride I~can't help won -- der why
+  do _ those _ that lie here know why did they die
+  and did they be -- lieve when they ans -- wered the call
+  did they real -- ly believe that this war would end war
+   
+  well~the sor -- row, the suf -- fering, the _ glo -- ry, the pain
+  the _ kil -- ling, the dy -- ing was all done in vain
+  for young Wil -- ly Mc -- Bride, it all hap -- pened a -- gain
+  and a -- gain, and a -- gain, and a -- gain, and a -- gain
 }
 
 verseFive = \lyricmode {
