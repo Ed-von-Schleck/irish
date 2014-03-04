@@ -3,7 +3,7 @@
 #(set-global-staff-size 18)
 
 \header {
-  title = "The Green Fields of France"
+  title = "Come Out Ye Black And Tans"
   composer = "Dominic Behan"
   arranger = "Ed von Schleck"
 }
