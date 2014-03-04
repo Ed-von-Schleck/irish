@@ -3,7 +3,7 @@
 #(set-global-staff-size 20)
 
 \header {
-  title = "Molly Maline"
+  title = "Molly Malone"
   composer = "traditional"
   arranger = "Ed von Schleck"
 }
