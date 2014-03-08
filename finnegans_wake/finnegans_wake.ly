@@ -1,6 +1,6 @@
 \version "2.18.0"
 
-#(set-global-staff-size 18)
+#(set-global-staff-size 17)
 
 \header {
   title = "Finnegan's Wake"
@@ -172,15 +172,13 @@ verseFive = \lyricmode {
   thunde -- rin' _ Jaysus, do_you think I'm dead?”
 }
 
-chordsPart = \new ChordNames \transpose g g \chordNames
-
-violinPart = \new Staff \transpose g g \violin
+chordsPart = \new ChordNames << \transpose c d { \chordNames } >>
 
 choirPart = \new ChoirStaff <<
   \new Staff \with {
     instrumentName = \markup \center-column { "Lead" }
   } <<
-    \new Voice = "lead" { \transpose g g \lead }
+    \new Voice = "lead" { \transpose c d \lead }
   >>
   \new Lyrics \with {
     \override VerticalAxisGroup #'staff-affinity = #CENTER
@@ -200,15 +198,14 @@ choirPart = \new ChoirStaff <<
   \new Staff \with {
     instrumentName = \markup \center-column { "Backing 1" "Backing 2" }
   } <<
-    \new Voice = "backingOne" { \transpose g g { \voiceOne \backingOne } }
-    \new Voice = "backingTwo" { \transpose g g {\voiceTwo \backingTwo } }
+    \new Voice = "backingOne" { \transpose c d { \voiceOne \backingOne } }
+    \new Voice = "backingTwo" { \transpose c d { \voiceTwo \backingTwo } }
   >>
 >>
 
 \score {
   <<
     \chordsPart
-    \violinPart
     \choirPart
   >>
   \layout {
